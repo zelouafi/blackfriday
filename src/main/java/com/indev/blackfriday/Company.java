@@ -1,12 +1,24 @@
 package com.indev.blackfriday;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Company {
-    public float sells(String capsule) {
-        return 0;
+    private float sellPrice = 0;
+    private Stock stock = new Stock();
+
+
+    public float sells(String name) {
+        Product product = stock.getProductByName(name);
+        product.sellsProducts(5);
+        float benefits = BenefitsCalculator.calcul(product);
+        sellPrice += benefits;
+        return benefits;
     }
 
-    public void stock(int i, String capsule, int i1) {
-
+    public void stock(int quantite, String capsule, int price) {
+        Product product = new Product(quantite, capsule, price);
+        stock.addProductToStock(product);
     }
 
     public Company to(int i) {
@@ -18,8 +30,9 @@ public class Company {
     }
 
     public int totalAssets() {
-        return 20;
+        return (int) (stock.pricesProducts() + sellPrice);
     }
+
 
     public Company blackFriday() {
         return this;
