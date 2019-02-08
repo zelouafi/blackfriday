@@ -1,3 +1,4 @@
+https://img.shields.io/amo/d/:addonId.svg
 [![Build Status](https://img.shields.io/travis/pwittchen/money-transfer-api.svg?branch=master&style=flat-square)](https://travis-ci.org/zelouafi/blackfriday)
 [![codecov](https://img.shields.io/codecov/c/github/pwittchen/money-transfer-api/master.svg?style=flat-square&label=coverage)](https://codecov.io/gh/zelouafi/blackfriday)
 
