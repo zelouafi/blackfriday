@@ -19,11 +19,10 @@ public class Stock {
         products.add(product);
     }
 
-    public Product getProductByName(String Product){
-        for (Product product: products) {
-            if (product.getName().equals(product.getName())){
-                return product;
-            }
+    public Product getProductByName(String product){
+        for (Product p: products) {
+            if (p.getName().equals(product))
+                return p ;
         }
         throw new IllegalArgumentException();
     }
