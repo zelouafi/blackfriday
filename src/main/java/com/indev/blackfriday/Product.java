@@ -29,5 +29,6 @@ public class Product {
     public void sellsProducts(int number){
         if (quantite >= number)
             quantite-=number;
+        else throw new RuntimeException();
     }
 }
